@@ -9,6 +9,9 @@ public class Challenge5 extends Challenges {
 		super(driver);
 	}
 
+	public String verifyPage(){
+		return driver.findElement(By.cssSelector("#step5 > h2")).getText();
+	}
 	public Challenges clickSubmit(){
 		//driver.findElement(By.xpath("//*[@id='step5']/p[2]/input")).click();
 		driver.findElement(By.cssSelector(".btn.btn-lg.btn-primary")).click();

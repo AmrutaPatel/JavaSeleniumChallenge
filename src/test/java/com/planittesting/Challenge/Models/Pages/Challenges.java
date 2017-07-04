@@ -12,7 +12,11 @@ public class Challenges extends BasePage {
 	public String getInputText(){
 		return this.driver.findElement(By.xpath("//*[@id='step1']/p[1]/strong")).getText();
 		}
-		
+
+	public String verifyPage(){
+		return driver.findElement(By.cssSelector("#step1 > h2")).getText();
+	}
+
 	public void enterTextInValidTextbox(){
 		driver.findElement(By.xpath("//*[contains(@class,'glyphicon-ok')]/../../*[@type='text']")).sendKeys(getInputText());
 	}

@@ -9,6 +9,9 @@ public class Challenge3 extends Challenges {
 		super(driver);
 	}
 
+	public String verifyPage(){
+		return driver.findElement(By.cssSelector("#step3 > h2")).getText();
+	}
 	public String getInputText(){
 		return  driver.findElement(By.cssSelector("#value")).getText();
 	}
@@ -21,7 +24,4 @@ public class Challenge3 extends Challenges {
 		driver.findElement(By.cssSelector(".btn.btn-lg.btn-primary")).click();
 		return new Challenge4(driver);
 	}
-		
-
-	
 }

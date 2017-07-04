@@ -15,7 +15,10 @@ public class Challenge4 extends Challenges {
 		super(driver);
 		
 	}
-	
+
+	public String verifyPage(){
+		return driver.findElement(By.cssSelector("#step4 > h2")).getText();
+	}
 	public String getInputText(){
 		return  driver.findElement(By.cssSelector("#numbers")).getText();
 	}
@@ -35,6 +38,4 @@ public class Challenge4 extends Challenges {
 		driver.findElement(By.xpath("//*[@id='step4']/p[2]/input")).click();
 		return new Challenge5(driver);
 	}
-	
-
 }
