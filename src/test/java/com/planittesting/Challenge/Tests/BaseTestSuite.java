@@ -36,28 +36,33 @@ public class BaseTestSuite {
 		Challenges challenge =	basePage.clickStartTheChallenge();
 		
 		//challenge-1
-		System.out.println(challenge.getInputText());
+		//enter the input string in the text box
 		challenge.enterTextInValidTextbox();
-		challenge.clickSubmit();
-		
+		Challenges	challenge2 = challenge.clickSubmit();
+			
 		//challenge-2
-		System.out.println(challenge.getInputText());	
-		challenge.challenge2();
-		challenge.clickSubmit();
+		//enter the input text in the text box with a tick mark along its side
+		challenge2.enterTextInValidTextbox();	
+		Challenges challenge3 = challenge2.clickSubmit();
 		
 		//challenge-3
-		challenge.challenge3();
+		//enter the input text in the text box with a tick mark along its side
+		challenge3.enterTextInValidTextbox();
+		Challenges challenge4 = challenge3.clickSubmit();;
 		
 		//challenge-4
-		challenge.challenge4();
+		//sort the input numbers and arrange them in the text boxes in correct order
+		challenge4.enterSortedNumbersInTextboxes();
+		Challenges challenge5 = challenge4.clickSubmit();
 		
 		//challenge-5
-		challenge.challenge5();
+		//click the last submit button
+		challenge5.clickSubmit();
 	}
 	
 	@After
 	public void cleanUp(){
-		//driver.quit();
+		driver.quit();
 	}  
 	
 

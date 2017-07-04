@@ -14,6 +14,6 @@ public class BasePage {
 		return new Challenges(driver);
 	}
 
-	
+	                                                              
 
 }
